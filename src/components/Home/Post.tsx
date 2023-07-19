@@ -1,13 +1,15 @@
 import { StyleSheet, Text, View, Image } from "react-native";
 import React from "react";
 import { POSTS, postType } from "../../../data/PostsData";
-import { Entypo } from '@expo/vector-icons';
+import { Entypo,AntDesign, FontAwesome5,Feather } from '@expo/vector-icons';
 
 
 const Post = ({ post }: { post: postType }) => {
   return (
     <View style={styles.postContainer}>
       <PostHeader post={post} />
+      <PostImage post={post}/>
+      <PostFooter post={post}/>
     </View>
   );
 };
@@ -23,6 +25,22 @@ const PostHeader = ({ post }: { post: postType }) => (
   </View>
 );
 
+const PostImage = ({post}:{post:postType})=>(
+    <Image source={{uri:post.imageUrl}} style={styles.postImage}/>
+)
+
+const PostFooter = ({post}:{post:postType})=>(
+    <View style={{flexDirection:'row',justifyContent:'space-between',marginTop:8,marginRight:15}}>
+        <View style={{flexDirection:'row', alignItems:'center'}}>
+        <AntDesign name="hearto" size={24} color="white" style={styles.iconStyle}/>
+        <FontAwesome5 name="comment" size={24} color="white" style={styles.iconStyle}/>
+        <Feather name="send" size={24} color="white" style={[styles.iconStyle,{transform:[{rotate:'10deg'}]}]} />
+        </View>
+
+        <Feather name="bookmark" size={24} color="white" />
+    </View>
+)
+
 export default Post;
 
 const styles = StyleSheet.create({
@@ -33,6 +51,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     margin: 5,
+    marginBottom:10,
     alignItems: "center",
   },
   postHeadSubContainer:{
@@ -50,5 +69,12 @@ const styles = StyleSheet.create({
     color:'white',
     marginLeft:10,
     fontWeight:'700'
+  },
+  postImage:{
+    height:450,
+    resizeMode:'cover'
+  },
+  iconStyle:{
+    marginLeft:15,
   }
 });

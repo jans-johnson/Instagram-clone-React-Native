@@ -46,5 +46,6 @@ const styles = StyleSheet.create({
   },
   storyText: {
     color: "white",
+    fontSize:12
   },
 });

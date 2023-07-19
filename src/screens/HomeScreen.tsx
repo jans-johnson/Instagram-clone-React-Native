@@ -14,9 +14,9 @@ import { POSTS, postType } from "../../data/PostsData";
 const HomeScreen = () => {
   return (
     <SafeAreaView style={styles.container}>
+      <ScrollView>
       <Header />
       <Stories />
-      <ScrollView>
         {POSTS.map((item, index) => {
           return <Post post={item} key={index}/>
         }

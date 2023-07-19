@@ -14,7 +14,7 @@ export type postType = {
 
 export const POSTS = [
     {
-        imageUrl: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.alamy.com%2Fstock-photo%2Findia-post.html&psig=AOvVaw3iTJJ8_QkXICd_Q2Os-rlW&ust=1689837468572000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCJD37aKdmoADFQAAAAAdAAAAABAD',
+        imageUrl: 'https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D&w=1000&q=80',
         user: USERS[0].user,
         likes: 7870,
         caption: 'Postal box Kazhchakal',
@@ -31,7 +31,7 @@ export const POSTS = [
         ]
     },
     {
-        imageUrl: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.alamy.com%2Fstock-photo%2Findia-post.html&psig=AOvVaw3iTJJ8_QkXICd_Q2Os-rlW&ust=1689837468572000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCJD37aKdmoADFQAAAAAdAAAAABAD',
+        imageUrl: 'https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D&w=1000&q=80',
         user: USERS[4].user,
         likes: 780,
         caption: 'Postal box Kazhchakal',
