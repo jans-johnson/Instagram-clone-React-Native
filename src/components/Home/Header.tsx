@@ -50,13 +50,14 @@ export default Header;
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor:'black',
     justifyContent: "space-between",
     alignItems: "center",
     flexDirection: "row",
-    marginLeft: 6,
-    marginRight:20,
-    marginBottom:10,
-    marginTop:13,
+    paddingLeft: 6,
+    paddingRight:20,
+    paddingBottom:8,
+    paddingTop:23,
   },
   logoText: {
     paddingLeft:5,
