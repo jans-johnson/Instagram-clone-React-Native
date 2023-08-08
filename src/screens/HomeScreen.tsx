@@ -48,7 +48,7 @@ const HomeScreen = () => {
             scrollY.setValue(e.nativeEvent.contentOffset.y/2);
           }}
           style={{
-            paddingTop: 82,
+            paddingTop: 75,
           }}
         >
           <Stories />
