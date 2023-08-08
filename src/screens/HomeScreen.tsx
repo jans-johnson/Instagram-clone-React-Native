@@ -1,14 +1,11 @@
 import {
-  Platform,
-  SafeAreaView,
   ScrollView,
   StatusBar,
   StyleSheet,
   Animated,
-  FlatList,
   View,
 } from "react-native";
-import React from "react";
+import React, { useRef } from "react";
 import Header from "../components/Home/Header";
 import Stories from "../components/Home/Stories";
 import Post from "../components/Home/Post";
@@ -19,29 +16,29 @@ const HomeScreen = () => {
   const diffClamp = Animated.diffClamp(scrollY, 0, 45);
   const translateY = diffClamp.interpolate({
     inputRange: [0, 45],
-    outputRange: [0, -65],
+    outputRange: [0, -75],
   });
+  const fadeHeader = diffClamp.interpolate({
+    inputRange: [0, 45],
+    outputRange: [1, 0],
+  });
+  
   return (
-    <View style={{ flex: 1 ,paddingTop:10}}>
-      <View
-        style={{
-          height: StatusBar.currentHeight,
-          width: "100%",
-          backgroundColor: "black",
-          position: "absolute",
-          top: 0,
-          zIndex: 1000,
-        }}
+    <View style={{ flex: 1}}>
+      <StatusBar
+        backgroundColor="black"
+        barStyle='light-content'
       />
+      
       <View style={styles.container}>
         <Animated.View
           style={{
-            paddingTop: 15,
             position: "absolute",
             width: "100%",
             elevation: 10,
             zIndex: 100,
             transform: [{ translateY: translateY }],
+            opacity:fadeHeader
           }}
         >
           <Header />
