@@ -1,7 +1,7 @@
 export const USERS = [
   {
     user: "JansJohnson",
-    image: "https://www.bugatti.com/fileadmin/_processed_/sei/p1/se-image-2180c3d181555154d1bc13ffbbf05f29.jpg",
+    image: "https://m.economictimes.com/thumb/height-450,width-600,imgsize-92902,msid-96559100/the-rimac-nevera-is-now-the-fastest-electric-car-in-the-world-image-rimac.jpg",
   },
   {
     user:'JohnsonKuruvilla',
@@ -13,7 +13,7 @@ export const USERS = [
   },
   {
     user: "Asok",
-    image: "https://www.bugatti.com/fileadmin/_processed_/sei/p1/se-image-2180c3d181555154d1bc13ffbbf05f29.jpg",
+    image: "https://m.economictimes.com/thumb/height-450,width-600,imgsize-92902,msid-96559100/the-rimac-nevera-is-now-the-fastest-electric-car-in-the-world-image-rimac.jpg",
   },
   {
     user:'Kumar',

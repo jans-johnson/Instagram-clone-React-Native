@@ -32,10 +32,11 @@ export default Stories;
 const styles = StyleSheet.create({
   storyContainer: {
     marginBottom: 13,
+    marginLeft:10
   },
   storySingleContainer: {
     alignItems: "center",
-    marginLeft: 6,
+    marginLeft: 7,
   },
   storyImage: {
     width: 70,

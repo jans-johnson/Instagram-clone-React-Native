@@ -41,10 +41,6 @@ export const POSTS = [
                 user:USERS[1].user,
                 comment:'woah nice'
             },
-            {
-                user:USERS[2].user,
-                comment:'rare piece'
-            },
         ]
     }
 ]
