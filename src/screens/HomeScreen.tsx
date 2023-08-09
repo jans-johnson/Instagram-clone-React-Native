@@ -10,6 +10,7 @@ import Header from "../components/Home/Header";
 import Stories from "../components/Home/Stories";
 import Post from "../components/Home/Post";
 import { POSTS, postType } from "../../data/PostsData";
+import { useNavigation } from "@react-navigation/native";
 
 const HomeScreen = () => {
   const scrollY = new Animated.Value(0);
@@ -41,7 +42,7 @@ const HomeScreen = () => {
             opacity:fadeHeader
           }}
         >
-          <Header />
+          <Header navigation={useNavigation()} />
         </Animated.View>
         <ScrollView
           onScroll={(e) => {

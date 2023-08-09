@@ -7,8 +7,9 @@ import {
   TouchableOpacity,
 } from "react-native";
 import React from "react";
+import { NavigationProp, useNavigation } from "@react-navigation/native";
 
-const Header = () => {
+const Header = ({navigation}:{navigation:NavigationProp<ReactNavigation.RootParamList>}) => {
   return (
     <View style={styles.container}>
       <TouchableOpacity>
@@ -30,7 +31,7 @@ const Header = () => {
             style={styles.icon}
           />
         </TouchableOpacity>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={()=>navigation.navigate('Chat' as never)}>
           <View style={styles.unreadBadge}>
             <Text style={styles.unreadBadgeText}>11</Text>
           </View>
