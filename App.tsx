@@ -31,7 +31,7 @@ export default function App() {
   }, []);
 
   const TabNavigator=()=>(
-    <Tab.Navigator screenOptions={{headerShown:false,tabBarShowLabel:false,tabBarStyle:{backgroundColor:'black'}}}>
+    <Tab.Navigator screenOptions={{headerShown:false,tabBarShowLabel:false,tabBarStyle:{backgroundColor:'black',height:40,borderTopWidth:0}}}>
       <Tab.Screen name="Home" component={HomeScreen} options={{tabBarIcon:({focused})=>{
         if(focused)
           return <Ionicons name="home-sharp" color={'white'} size={21}/>
@@ -57,7 +57,20 @@ export default function App() {
     />
 
       }}}/>
-      <Tab.Screen name="Profile" component={ProfileScreen} />
+      <Tab.Screen name="Profile" component={ProfileScreen}  options={{tabBarIcon:({focused})=>{
+        return focused?<Image
+        source={{
+          uri: "https://www.refined-marques.com/wp-content/uploads/2020/06/sportscarmaintenance-940x480-1.jpg",
+        }}
+        style={{borderRadius:13,width:26,height:26,borderWidth:1,borderColor:'white'}}
+      />:<Image
+      source={{
+        uri: "https://www.refined-marques.com/wp-content/uploads/2020/06/sportscarmaintenance-940x480-1.jpg",
+      }}
+      style={{borderRadius:13,width:26,height:26}}
+    />
+
+      }}}/>
     </Tab.Navigator>
   )
 

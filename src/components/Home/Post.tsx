@@ -2,6 +2,9 @@ import { StyleSheet, Text, View, Image } from "react-native";
 import React from "react";
 import { POSTS, postType } from "../../../data/PostsData";
 import { Entypo, AntDesign, FontAwesome5, Feather } from "@expo/vector-icons";
+import { commentIcon } from "../../../data/SvgFiles";
+import SvgIcon from "./SvgIcon";
+import LikeButton from "../general/LikeButton";
 
 const Likes = ({ likes }: { likes: number }) => (
   <View style={{ flexDirection: "row", marginTop: 4 }}>
@@ -98,20 +101,22 @@ const PostFooter = ({ post }: { post: postType }) => (
         justifyContent: "flex-start",
       }}
     >
-      <AntDesign name="hearto" size={24} color="white" />
-      <FontAwesome5
-        name="comment"
-        size={24}
-        color="white"
-        style={{
-          marginLeft: 15,
-        }}
-      />
+      <LikeButton color="white" onPress={()=>console.log('Like')} onPressColor="red" size={27}/>
+    
+      <SvgIcon
+            pathName={commentIcon}
+            color={["white"]}
+            height={24}
+            stroke="blue"
+            strokeWidth={0}
+            width={24}
+            style={{marginLeft:19}}
+          />
       <Feather
         name="send"
         size={24}
         color="white"
-        style={[{ marginLeft: 15, transform: [{ rotate: "10deg" }] }]}
+        style={[{ marginLeft: 19, transform: [{ rotate: "10deg" }] }]}
       />
     </View>
 
