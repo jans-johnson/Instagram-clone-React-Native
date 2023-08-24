@@ -1,52 +1,10 @@
-import { ScrollView, StyleSheet, Text, View, Image } from "react-native";
-import React from "react";
-import { USERS } from "../../../data/Users";
+import InstaStory from "react-native-insta-story";
+import { storyData } from "../../../data/StoryData";
+
+
 
 const Stories = () => {
-  return (
-    <View style={styles.storyContainer}>
-      <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-        {USERS.map((story, index) => {
-          return (
-            <View style={styles.storySingleContainer} key={index}>
-              <Image
-                source={{
-                  uri: story.image,
-                }}
-                style={styles.storyImage}
-              />
-              <Text style={styles.storyText}>{
-              story.user.length>11 ? story.user.slice(0,10).toLowerCase()+'...'
-                : story.user.toLowerCase()}</Text>
-            </View>
-          );
-        })}
-      </ScrollView>
-      <Text>Stories</Text>
-    </View>
-  );
+  return <InstaStory data={storyData} duration={10} />;
 };
 
 export default Stories;
-
-const styles = StyleSheet.create({
-  storyContainer: {
-    marginBottom: 13,
-    marginLeft:10
-  },
-  storySingleContainer: {
-    alignItems: "center",
-    marginLeft: 7,
-  },
-  storyImage: {
-    width: 70,
-    height: 70,
-    borderRadius: 35,
-    borderWidth: 2,
-    borderColor: "#ff8501",
-  },
-  storyText: {
-    color: "white",
-    fontSize:12
-  },
-});
