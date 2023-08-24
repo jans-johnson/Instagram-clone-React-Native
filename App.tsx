@@ -79,7 +79,7 @@ export default function App() {
   }
   return (
     <NavigationContainer>
-      <topTab.Navigator tabBar={(props)=>{return <View></View>}} initialRouteName="Main">
+      <topTab.Navigator tabBar={()=>{return <View></View>}} initialRouteName="Main">
       <topTab.Screen name="Camera" component={CameraScreen} />
       <topTab.Screen name="Main" component={TabNavigator} />
       <topTab.Screen name="Chat" component={ChatScreen} />
